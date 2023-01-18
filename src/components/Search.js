@@ -1,10 +1,8 @@
 import SearchIcon from "@material-ui/icons/Search";
 import MicIcon from "@material-ui/icons/Mic";
 import { Button } from "@material-ui/core";
-import styled from "styled-components";
-// import { Search } from '@material-ui/icons';
-
 import { useState } from "react";
+import styled from "styled-components";
 
 const SearchInput = styled.div`
   display: flex;
@@ -22,9 +20,8 @@ const SearchInput = styled.div`
     border: 0;
     outline: 0;
   }
-
   .searchicon {
-    color: gray;
+    color: gray1;
   }
 `;
 

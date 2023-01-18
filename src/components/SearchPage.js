@@ -50,6 +50,48 @@ const SearchPageOption = styled.div`
   margin-right: 20px;
 `;
 
+const SearchPageResults = styled.div`
+  max-width: 650px;
+  margin-top: 20px;
+  margin-left: 240px;
+  margin-bottom: 100px;
+  .resultCount {
+    color: #70757a;
+    font-size: 14px;
+  }
+  .result {
+    margin: 40 0px;
+  }
+`;
+
+const SearchPageLink = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 3px;
+  img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+`;
+
+const SearchPageResultTitle = styled.a`
+  text-decoration: none;
+  h2 {
+    font-weight: 500;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const SearchPageResultDesc = styled.p`
+  margin-top: 10px;
+`;
+
 const SearchPage = () => {
   return (
     <div>
@@ -94,15 +136,35 @@ const SearchPage = () => {
             </Options>
             <Options right>
               <SearchPageOption>
-                <Link to="settings">Settings</Link>
+                <Link to="/settings">Settings</Link>
               </SearchPageOption>
               <SearchPageOption>
-                <Link to="tools"></Link>
+                <Link to="/tools"></Link>
               </SearchPageOption>
             </Options>
           </SearchPageOptions>
         </div>
       </SearchPageHeader>
+      <SearchPageResults>
+        <p className="resultCount">
+          About 21,80,00,00 results (1.32 seconds) for TWD
+        </p>
+        <div className="result">
+          <SearchPageLink href="">
+            <img
+              src="https://thewebdev.tech/static/ce59ef6831a6ff9cba3b957baece8d8c/a3e81/logo.webp"
+              alt=""
+            />
+          </SearchPageLink>
+          <SearchPageResultTitle href="">
+            <h2>The Web Dev</h2>
+          </SearchPageResultTitle>
+          <SearchPageResultDesc>
+            Lorem, ipsum sit amet consectetur adipisicing elit, Impedit
+            suscipit!
+          </SearchPageResultDesc>
+        </div>
+      </SearchPageResults>
     </div>
   );
 };

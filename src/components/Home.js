@@ -63,10 +63,10 @@ const Home = () => {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png"
           alt="google-logo"
         />
-
         <div>
           <Search />
         </div>
+        1
       </BodyContainer>
     </HomeContainer>
   );
